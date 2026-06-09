@@ -263,7 +263,10 @@ export default function Game() {
                                     ))}
                                 </select>
                                 <select value={year.toString()} onChange={handleYearChange} className="bigger-dropdown">
-                                    {Array.from({ length: 20 }, (_, i) => new Date().getFullYear() - i).map((value) => (
+                                    {Array.from(
+                                        { length: new Date().getFullYear() - 1960 + 1 },
+                                        (_, i) => new Date().getFullYear() - i
+                                    ).map((value) => (
                                         <option key={value} value={value}>
                                             {value}
                                         </option>
