@@ -6,7 +6,7 @@ import './game.css';
 import { String } from 'aws-sdk/clients/cloudtrail';
 
 // Define the start and end dates
-const startDate = new Date('2005-04-08').getTime();
+const startDate = new Date('1960-04-08').getTime();
 const endDate = new Date().getTime();
 const totalDays = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
 
