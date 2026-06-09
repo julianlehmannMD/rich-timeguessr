@@ -42,13 +42,13 @@ function Results() {
     const userLat = parseFloat(words[1]);
     const userLng = parseFloat(words[2]);
     const userYear = parseInt(words[4]);
-
-    const correctLat = parseFloat(words[7]);
-    const correctLng = parseFloat(words[8]);
-    const correctYear = parseInt(words[10]);
-
-    const distanceErr = parseFloat(words[12]);
-    const yearErr = parseInt(words[14]);
+    
+    const correctLat = parseFloat(words[6]);
+    const correctLng = parseFloat(words[7]);
+    const correctYear = parseInt(words[9]);
+    
+    const distanceErr = parseFloat(words[11]);
+    const yearErr = parseInt(words[13]);
 
     const maxScore = 500;
 
