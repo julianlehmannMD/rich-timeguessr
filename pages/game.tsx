@@ -91,7 +91,7 @@ export default function Game() {
         const storedRound = localStorage.getItem('round');
         let roundNumber = storedRound ? parseInt(storedRound) : 1;
 
-        if (roundNumber > 5) {
+        if (roundNumber > 10) {
             roundNumber = 1;
         }
 
@@ -126,7 +126,7 @@ export default function Game() {
                 [allIndexes[i], allIndexes[j]] = [allIndexes[j], allIndexes[i]];
             }
 
-            for (let i = 0; randomIndexes.length < 5; i++) {
+            for (let i = 0; randomIndexes.length < 10; i++) {
                 if (shownImages.size === images.length) {
                     shownImages.clear();
                 }
@@ -141,7 +141,7 @@ export default function Game() {
                 }
             }
 
-            if (shownImages.size < 5) {
+            if (shownImages.size < 10) {
                 shownImages.clear();
                 randomIndexes.forEach((index: Number) => shownImages.add(index));
             }
@@ -236,7 +236,7 @@ export default function Game() {
     return (
         <main style={{ padding: '20px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                <h2>Round {round} of 5</h2>
+                <h2>Round {round} of 10</h2>
                 <button className="copy-link-button" onClick={copyToClipboard}>Copy Game Link</button>
             </div>
 
