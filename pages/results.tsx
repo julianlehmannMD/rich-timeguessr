@@ -122,7 +122,7 @@ function Results() {
                 </div>
 
                 <div style={{ position: 'fixed', right: '20px', bottom: '20px', padding: '10px' }}>
-                    {round <= 5 ? (
+                    {round <= 10 ? (
                         <Link
                             href="/game"
                             style={{ fontSize: '24px' }}
