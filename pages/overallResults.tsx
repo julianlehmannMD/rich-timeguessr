@@ -32,8 +32,8 @@ function OverallResults() {
         <div style={{padding: '10px'}}>
             <h2>Overall Results</h2>
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
-                <p style={{ fontSize: '32px' }}>You scored <strong>{totalScore}</strong> out of 5000</p>
-                <progress value={totalScore} max={5000} style={{ height: '50px', width: '80%' }}></progress>
+                <p style={{ fontSize: '32px' }}>You scored <strong>{totalScore}</strong> out of 10000</p>
+                <progress value={totalScore} max={10000} style={{ height: '50px', width: '80%' }}></progress>
             </div>
            <div style={{ marginTop: '10px', padding: '10px', display: 'flex', justifyContent: 'space-between' }}>
                 <Link href="/game" onClick={newGame} style={{ fontSize: '24px' }}>
