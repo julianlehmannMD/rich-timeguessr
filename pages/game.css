@@ -69,3 +69,72 @@ body {
 .copy-link-button:active {
     transform: scale(0.95);
 }
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px !important;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .copy-link-button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    form > div {
+        width: 100% !important;
+    }
+
+    .map-container {
+        width: 100% !important;
+        height: 35vh !important;
+        margin-top: 10px;
+    }
+
+    .time-container {
+        width: 100% !important;
+        margin-top: 15px;
+    }
+
+    .time-container input[type="range"] {
+        width: 100% !important;
+    }
+
+    .bigger-dropdown {
+        width: 100%;
+        font-size: 22px;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .button-container {
+        width: 100% !important;
+        margin-top: 15px;
+    }
+
+    .guess-button {
+        width: 100%;
+        font-size: 24px;
+        padding: 14px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    .results-div {
+        width: 100% !important;
+    }
+
+    .results-div > div {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    progress {
+        width: 90% !important;
+    }
+}
