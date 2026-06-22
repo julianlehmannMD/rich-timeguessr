@@ -1,6 +1,10 @@
 body {
     background: linear-gradient(to right, #ffe4ff, #aec4ff);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .game-layout {
@@ -10,24 +14,37 @@ body {
     width: 100%;
 }
 
+/* IMAGE */
+
 .game-image-container {
     position: relative;
-    width: 45vw;
-    height: 45vh;
+    width: 100%;
+    height: 40vh;
 }
+
+/* MAP */
 
 .map-container {
     position: relative;
     width: 100%;
-    height: 35vh;
-    padding: 10px;
+    height: 40vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
+
+.map-container > div {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* CONTROLS */
 
 .game-controls {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 15px;
     width: 100%;
-    gap: 20px;
 }
 
 .time-container {
@@ -35,24 +52,43 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 10px;
+}
+
+.time-container input[type="range"] {
+    width: 100%;
 }
 
 .bigger-dropdown {
-    font-size: 1.5em;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .button-container {
-    padding: 10px;
+    width: 100%;
 }
 
 .guess-button {
-    font-size: 24px;
-    padding: 5px;
     width: 100%;
+    font-size: 24px;
+    padding: 14px;
     background-color: red;
     color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
+
+.guess-button:hover {
+    background-color: rgb(197, 0, 0);
+}
+
+.guess-button:active {
+    transform: scale(0.98);
+}
+
+/* HEADER */
 
 .copy-link-button {
     font-size: 16px;
@@ -61,7 +97,16 @@ body {
     height: fit-content;
     background-color: rgb(209, 209, 209);
     color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
 }
+
+.copy-link-button:hover {
+    background-color: rgb(172, 172, 172);
+}
+
+/* RESULTS */
 
 .results-div {
     display: flex;
@@ -70,13 +115,21 @@ body {
     padding: 10px;
 }
 
+/* MOBILE */
+
 @media (max-width: 768px) {
+
     main {
         padding: 10px !important;
     }
 
     h2 {
         font-size: 20px;
+    }
+
+    .copy-link-button {
+        font-size: 14px;
+        padding: 8px 10px;
     }
 
     .game-image-container {
@@ -87,7 +140,6 @@ body {
     .map-container {
         width: 100%;
         height: 35vh;
-        padding: 0;
     }
 
     .game-controls {
@@ -97,34 +149,22 @@ body {
 
     .time-container {
         width: 100%;
-        padding: 0;
-    }
-
-    .time-container input[type="range"] {
-        width: 100% !important;
     }
 
     .bigger-dropdown {
         width: 100%;
         font-size: 22px;
         padding: 10px;
-        margin-top: 10px;
     }
 
     .button-container {
         width: 100%;
-        padding: 0;
     }
 
     .guess-button {
         width: 100%;
         font-size: 24px;
         padding: 14px;
-    }
-
-    .copy-link-button {
-        font-size: 14px;
-        padding: 8px 10px;
     }
 
     .results-div {
@@ -138,5 +178,25 @@ body {
 
     progress {
         width: 90% !important;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width: 769px) {
+
+    .game-image-container {
+        width: 45vw;
+        height: 45vh;
+    }
+
+    .map-container {
+        width: 45vw;
+        height: 45vh;
+    }
+
+    .game-controls {
+        flex-direction: row;
+        align-items: center;
     }
 }
