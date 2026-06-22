@@ -260,7 +260,7 @@ export default function Game() {
                         <Map setGuessLocation={setUserGuessLocation} />
                     </div>
 
-                    <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%', marginTop: '32vh' }}>
+                    <div className="game-controls">
                         <div className="time-container">
                             <input
                                 type="range"
