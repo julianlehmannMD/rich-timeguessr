@@ -242,7 +242,7 @@ export default function Game() {
 
             <div>
                 {currentImage && currentImage.url && (
-                    <div style={{ position: 'relative', width: '45vw', height: '45vh' }}>
+                    <div className="game-image-container">
                         <Image
                             src={currentImage.url || ''}
                             alt="Game Image"
