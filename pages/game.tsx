@@ -240,26 +240,24 @@ export default function Game() {
                 <button className="copy-link-button" onClick={copyToClipboard}>Copy Game Link</button>
             </div>
 
-            <div>
-                {currentImage && currentImage.url && (
-                    <div className="game-image-container">
-                        <Image
-                            src={currentImage.url || ''}
-                            alt="Game Image"
-                            fill
-                            sizes="(max-width: 768px) 100vw, 45vw"
-                            style={{ objectFit: 'contain' }}
-                        />
-                    </div>
-                )}
-            </div>
-
             <form onSubmit={checkGuess}>
-                <div style={{ display: 'flex', flexDirection: 'column', width: '100%' }}>
+                <div className="game-layout">
+                    {currentImage && currentImage.url && (
+                        <div className="game-image-container">
+                            <Image
+                                src={currentImage.url || ''}
+                                alt="Game Image"
+                                fill
+                                sizes="(max-width: 768px) 100vw, 45vw"
+                                style={{ objectFit: 'contain' }}
+                            />
+                        </div>
+                    )}
+            
                     <div className="map-container">
                         <Map setGuessLocation={setUserGuessLocation} />
                     </div>
-
+            
                     <div className="game-controls">
                         <div className="time-container">
                             <input
@@ -270,7 +268,7 @@ export default function Game() {
                                 onChange={handleSliderChange}
                                 style={{ width: '90%' }}
                             />
-
+            
                             <div>
                                 <select value={year.toString()} onChange={handleYearChange} className="bigger-dropdown">
                                     {Array.from(
@@ -284,7 +282,7 @@ export default function Game() {
                                 </select>
                             </div>
                         </div>
-
+            
                         <div className="button-container">
                             <button type="submit" className="guess-button">Guess</button>
                         </div>
